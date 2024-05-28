@@ -17,19 +17,33 @@
 
 body {
   background-color: var(--background-main);
+  margin: 0;
 }
 
 main {
   margin-left: auto;
   margin-right: auto;
+  margin-top: 5rem;
   min-width: var(--mobile-size);
+  align-items: center;
+  text-align: center;
+  padding: 0;
 
 }
 
 img {
-  display: block;
-  
-  width: min(var(--mobile-size), var(--desktop-size));
+  border-image-source: linear-gradient(var(--accent-color));
+  width: min(var(--mobile-size), (var(--desktop-size)));
+}
+.one{
+  padding: 0;
+  margin-top: 0;
+}
+
+.two {
+  background-color: var(--card-bacground);
+  margin: 0;
+  padding: 0;
 }
 
 h1, h2 {
@@ -38,6 +52,8 @@ h1, h2 {
 
 p {
   color: var(--main-paragraph-color);
+} 
+
+h1 {
+  
 }
-
-

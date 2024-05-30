@@ -129,7 +129,7 @@ footer {
   }
   
   img {
-    background-image: url(/images/image-header-desktop.jpg);
+    background-image: url(images/image-header-desktop.jpg);
     border-top-left-radius: 0px;
     border-bottom-right-radius: 13px;
     width: 100%;

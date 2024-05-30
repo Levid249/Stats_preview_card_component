@@ -1,6 +1,17 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
+/* // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900 */
+
+/* .inter-<uniquifier> {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+} */
 
 :root {
   --background-main: hsl(233, 47%, 7%); 
@@ -16,44 +27,154 @@
 } 
 
 body {
-  background-color: var(--background-main);
   margin: 0;
+  padding: 0;
+  background-color: var(--background-main);
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 main {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5rem;
-  min-width: var(--mobile-size);
-  align-items: center;
+  background-color: var(--card-bacground);
   text-align: center;
-  padding: 0;
-
+  margin-top: 7rem;
+  width: min(var(--mobile-size));
+  margin-left: auto; 
+  margin-right: auto;
+  border-radius: 13px;
+  padding-bottom: 2rem;
+  
 }
 
 img {
-  border-image-source: linear-gradient(var(--accent-color));
-  width: min(var(--mobile-size), (var(--desktop-size)));
-}
-.one{
-  padding: 0;
-  margin-top: 0;
-}
-
-.two {
-  background-color: var(--card-bacground);
-  margin: 0;
-  padding: 0;
-}
-
-h1, h2 {
-  color: var(--main-heading-stats);
+  width: min(var(--mobile-size));
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
+  position: relative;
+  z-index: 1;
 }
 
 p {
+  /* outline: auto; */
+  margin-left: 2rem;
+  margin-right: 2rem;
   color: var(--main-paragraph-color);
-} 
+  font-size: 12px;
+  margin-top: 0.5rem;
+  font-weight:bold;
+}
 
-h1 {
+spc {
+  color: var(--accent-color);
+}
+
+#main-paragraph {
+  color: var(--main-paragraph-color);
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+h1{
+    color: var(--main-heading-stats);
+    font-size: 30px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+h3 {
+  /* outline: auto; */
+  color: var(--main-heading-stats);
+  margin-top: 2rem;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.statistics {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.overlay {
+  background-color: hsl(277, 95%, 12%, 15);
+  height: 235px;
+  width: min(var(--mobile-size));
+  position: absolute;
+  opacity: 0.7;
+  z-index: 2;
+  top: 7rem;
+}
+
+footer {
+  color: white;
+  margin-top: 4rem;
+}
+
+@media (min-width: 500px){
+ 
+  main {
+    display: flex;  
+    flex-direction: row-reverse; 
+    width: var(--desktop-size);
+    padding-bottom: 0;
+    /* outline: auto; */
+    text-align: left;
+    margin-top: 14rem;
+  }
+
+  section {
+    /* outline: auto; */
+    width: 50%;
+  }
   
+  img {
+    background-image: url(../stats-preview-card-component-main/images/image-header-desktop.jpg);
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 13px;
+    width: 100%;
+    height: 100%;
+  }
+
+  #main-paragraph {
+    margin-left: 8.8vh;
+    margin-right:  13vh;
+    font-size: 18px;
+  }
+  
+  p{
+    margin: 0;
+    padding: 0;
+  }
+  h1 {
+    padding-top: 2vh;
+    font-size: 50px;
+    margin-right: 7vh;
+    margin-left: 2vh;
+    text-align: center;
+  }
+
+
+  .statistics {
+    margin-left: 1vh;
+    margin-right:  6vh;
+    margin-top: 13vh;
+    display: flex;
+    justify-content: space-around;
+    
+  }
+
+  .overlay {
+    margin-top: 7rem;
+    /* height: 58.93%;
+    width: 42.85%; */
+    width: 74.5vh;
+    height: 55vh;
+    border-top-right-radius: 13px;
+    border-bottom-right-radius: 13px;
+  }
+
+  footer {
+    text-align: center;
+  }
 }
